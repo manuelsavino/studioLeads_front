@@ -17,65 +17,84 @@ class Navbar extends Component {
 
   render() {
     return (
-      <nav className="navbar fixed-top navbar-expand-lg navbar-light bg-white shadow-sm py-0 ">
-        <a className="navbar-brand py-3" href="#">
-          <i className="fas fa-filter" />
-          Studio Leads
-        </a>
-        <button
-          className="navbar-toggler"
-          type="button"
-          data-toggle="collapse"
-          data-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span className="navbar-toggler-icon" />
-        </button>
+      <>
+        <div className="w-100 bg-info text-white">
+          <p className="p-1 m-0 ml-1">{`Howdy, ${
+            this.props.auth.user.name
+          }`}</p>
+        </div>
+        <nav className="navbar navbar-expand-lg navbar-light bg-white shadow-sm py-0 ">
+          <a className="navbar-brand py-3" href="#">
+            <i className="fas fa-filter" />
+            Studio Leads
+          </a>
+          <button
+            className="navbar-toggler"
+            type="button"
+            data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span className="navbar-toggler-icon" />
+          </button>
 
-        <div className="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul className="navbar-nav ml-auto">
-            <li className="nav-item py-2 text-center">
-              <i className="material-icons">dashboard</i>
-              <Link to={"/admin"} className="nav-link">
-                Dashboard
-              </Link>
-            </li>
-            <li className="nav-item  py-2 text-center">
-              <i className="material-icons ">class</i>
-              <Link className="nav-link" to={"/admin/classes"}>
-                Class Managment
-              </Link>
-            </li>
+          <div className="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul className="navbar-nav ml-auto">
+              <li className="nav-item py-2 text-center">
+                <i className="material-icons">dashboard</i>
+                <Link to={"/admin"} className="nav-link">
+                  Dashboard
+                </Link>
+              </li>
+              <li className="nav-item  py-2 text-center">
+                <i className="material-icons ">class</i>
+                <Link className="nav-link" to={"/admin/classes"}>
+                  Class Managment
+                </Link>
+              </li>
+              <li className="nav-item  py-2 text-center">
+                <i className="material-icons">supervisor_account</i>
+                <Link
+                  className="nav-link"
+                  to={`/studio/${this.props.auth.user.studio}`}
+                >
+                  Parent's View
+                </Link>
+              </li>
 
-            {/* <li className="nav-item  py-4 text-center">
+              {/* <li className="nav-item  py-4 text-center">
               <i className="material-icons">contacts</i>
               <Link className="nav-link" to={"/admin/parents"}>
                 Parents
               </Link>
             </li> */}
-            <li className="nav-item  py-2 text-center">
-              <i className="material-icons">archive</i>
-              <Link className="nav-link" to={"/admin/#"}>
-                Lead Archive
-              </Link>
-            </li>
-            <li className="nav-item  py-2 text-center">
-              <i className="material-icons">show_chart</i>
-              <Link className="nav-link" to={"/admin/#"}>
-                Analytics
-              </Link>
-            </li>
-            <li onClick={this.onLogoutClick} class="nav-item  py-2 text-center">
-              <i class="material-icons">exit_to_app</i>
-              <Link className="nav-link" to={"/login/"}>
-                Logout
-              </Link>
-            </li>
-          </ul>
-        </div>
-      </nav>
+              <li className="nav-item  py-2 text-center">
+                <i className="material-icons">archive</i>
+                <Link className="nav-link" to={"/admin/#"}>
+                  Lead Archive
+                </Link>
+              </li>
+              <li className="nav-item  py-2 text-center">
+                <i className="material-icons">show_chart</i>
+                <Link className="nav-link" to={"/admin/#"}>
+                  Analytics
+                </Link>
+              </li>
+              <li
+                onClick={this.onLogoutClick}
+                class="nav-item  py-2 text-center"
+              >
+                <i class="material-icons">exit_to_app</i>
+                <Link className="nav-link" to={"/login/"}>
+                  Logout
+                </Link>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </>
     );
   }
 }
