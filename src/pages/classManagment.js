@@ -51,8 +51,8 @@ export class ClassManagment extends Component {
       <Fragment>
         <div className="wrapper">
           <Navbar active="classMgmt" />
-          <Container className="mt-1">
-            <Card className="shadow-sm mt-2">
+          <Container>
+            <Card className="shadow-sm">
               <CardHeader
                 tag="h4"
                 className="text-uppercase bg-purple text-light d-flex justify-content-between"

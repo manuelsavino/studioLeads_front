@@ -18,9 +18,10 @@ class Navbar extends Component {
   render() {
     return (
       <>
+        {console.log(this.props.auth.user)}
         <div className="w-100 bg-info text-white">
-          <p className="p-1 m-0 ml-1">{`Howdy, ${
-            this.props.auth.user.name
+          <p className="p-1 m-0 ml-1">{`Howdy, ${this.props.auth.user.name} | ${
+            this.props.auth.user.studioName
           }`}</p>
         </div>
         <nav className="navbar navbar-expand-lg navbar-light bg-white shadow-sm py-0 ">

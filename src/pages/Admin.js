@@ -69,8 +69,8 @@ export class Admin extends Component {
       <Fragment>
         <div className="wrapper">
           <Navbar />
-          <Container className="mt-1">
-            <Card className="mt-2 shadow-sm">
+          <Container>
+            <Card className="shadow-sm">
               <CardHeader
                 tag="h4"
                 className="text-uppercase bg-purple text-light"

@@ -68,7 +68,7 @@ class ChildForm extends Component {
     return (
       <div className="container p-0">
         <div className="text-center">
-          <img className="my-auto" src="./logo.png" alt="logo" />
+          <img className="my-auto" src="../logo.png" alt="logo" />
           <ul id="progressbar">
             <li className="active"> Choose a class</li>
             <li>Pick a date</li>
@@ -208,7 +208,7 @@ class ChildForm extends Component {
             this.state.loading ? (
               //if its still loading show image for loading
               <div className="card-body text-center">
-                <img className="my-auto" src="./loading.gif" alt="Loading" />
+                <img className="my-auto" src="../loading.gif" alt="Loading" />
               </div>
             ) : (
               //if its not, it means no classes matched the age
