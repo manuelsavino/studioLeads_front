@@ -69,7 +69,7 @@ class Navbar extends Component {
             </li>
             <li onClick={this.onLogoutClick} class="nav-item  py-2 text-center">
               <i class="material-icons">exit_to_app</i>
-              <Link className="nav-link" to={"/admin/#"}>
+              <Link className="nav-link" to={"/login/"}>
                 Logout
               </Link>
             </li>
