@@ -49,7 +49,7 @@ export class Login extends Component {
           //   style={{height: '100vh'}}
         >
           <div className="card">
-            {console.log(this.props.errors)}
+            {/* {console.log(this.props.errors)} */}
             <div className="card-body">
               <form onSubmit={this.onSubmit}>
                 <div className="form-group">

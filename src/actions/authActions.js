@@ -5,7 +5,7 @@ import { SET_CURRENT_USER, GET_ERRORS } from "./types";
 
 export const loginUser = userData => dispatch => {
   axios
-    .post("http://stark-shelf-47124.herokuapp.com/api/users/login/", userData)
+    .post("https://stark-shelf-47124.herokuapp.com/api/users/login/", userData)
     .then(res => {
       const { token } = res.data;
       // console.log(res.data);
