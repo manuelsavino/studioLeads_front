@@ -2,48 +2,48 @@ import axios from "axios";
 
 export default {
   getClasses: function() {
-    return axios.get("http://stark-shelf-47124.herokuapp.com/api/classes");
+    return axios.get("https://stark-shelf-47124.herokuapp.com/api/classes");
   },
 
   createClass: function(ClassData) {
     return axios.post(
-      "http://stark-shelf-47124.herokuapp.com/api/classes",
+      "https://stark-shelf-47124.herokuapp.com/api/classes",
       ClassData
     );
   },
   getActiveClasses: function(id) {
     console.log("from api util", id);
     return axios.get(
-      `http://stark-shelf-47124.herokuapp.com/api/classes/active/${id}`
+      `https://stark-shelf-47124.herokuapp.com/api/classes/active/${id}`
     );
   },
   createLead: function(data) {
     return axios.post(
-      "http://stark-shelf-47124.herokuapp.com/api/leads/createLead",
+      "https://stark-shelf-47124.herokuapp.com/api/leads/createLead",
       data
     );
   },
 
   getLeads: function() {
-    return axios.get("http://stark-shelf-47124.herokuapp.com/api/leads/");
+    return axios.get("https://stark-shelf-47124.herokuapp.com/api/leads/");
   },
 
   getOneLead: async function(id) {
     const lead = axios.get(
-      `http://stark-shelf-47124.herokuapp.com/api/leads/${id}`
+      `https://stark-shelf-47124.herokuapp.com/api/leads/${id}`
     );
     return await lead;
   },
 
   getOneParent: function(id) {
     return axios.get(
-      `http://stark-shelf-47124.herokuapp.com/api/parents/${id}`
+      `https://stark-shelf-47124.herokuapp.com/api/parents/${id}`
     );
   },
 
   sendSms: async function(messageData) {
     const res = axios.post(
-      "http://stark-shelf-47124.herokuapp.com/api/sms/out",
+      "https://stark-shelf-47124.herokuapp.com/api/sms/out",
       messageData
     );
     return await res;
@@ -54,7 +54,7 @@ export default {
       leadParent: leadParent
     };
     return axios.post(
-      "http://stark-shelf-47124.herokuapp.com/api/calls/call",
+      "https://stark-shelf-47124.herokuapp.com/api/calls/call",
       data
     );
   },
@@ -66,7 +66,7 @@ export default {
     };
 
     const res = axios.post(
-      "http://stark-shelf-47124.herokuapp.com/api/parents/writeNote",
+      "https://stark-shelf-47124.herokuapp.com/api/parents/writeNote",
       data
     );
     return await res;
@@ -74,19 +74,19 @@ export default {
 
   updateLeadStatus: function(data, id) {
     return axios.put(
-      `http://stark-shelf-47124.herokuapp.com/api/leads/updateStatus/${id}`,
+      `https://stark-shelf-47124.herokuapp.com/api/leads/updateStatus/${id}`,
       data
     );
   },
   updateClassStatus: function(data, id) {
     return axios.put(
-      `http://stark-shelf-47124.herokuapp.com/api/classes/updateStatus/${id}`,
+      `https://stark-shelf-47124.herokuapp.com/api/classes/updateStatus/${id}`,
       data
     );
   },
   deleteParent: async function(id) {
     const res = axios.delete(
-      `http://stark-shelf-47124.herokuapp.com/api/parents/${id}`
+      `https://stark-shelf-47124.herokuapp.com/api/parents/${id}`
     );
     return await res;
   }
